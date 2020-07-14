@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="BDD Test Suite" duration-ms="75867" started-at="2020-06-29T15:36:01Z" finished-at="2020-06-29T15:37:17Z">
+    <groups>
+      <group name="cucumber scenarios">
+        <method signature="TestRunner.feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.restassured.runner.TestRunner@2758fe70]" name="feature" class="com.restassured.runner.TestRunner"/>
+      </group> <!-- cucumber scenarios -->
+    </groups>
+    <test name="API Testing" duration-ms="75867" started-at="2020-06-29T15:36:01Z" finished-at="2020-06-29T15:37:17Z">
+      <class name="com.restassured.runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.restassured.runner.TestRunner@2758fe70]" name="setUpClass" is-config="true" duration-ms="250" started-at="2020-06-29T21:06:01Z" finished-at="2020-06-29T21:06:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.restassured.runner.TestRunner@2758fe70]" name="feature" duration-ms="55690" started-at="2020-06-29T21:06:02Z" description="Runs Cucumber Feature" data-provider="scenario" finished-at="2020-06-29T21:06:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify simple get request without body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["This feature file has all Get requests"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.restassured.runner.TestRunner@2758fe70]" name="feature" duration-ms="17573" started-at="2020-06-29T21:06:57Z" description="Runs Cucumber Feature" data-provider="scenario" finished-at="2020-06-29T21:07:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify simple get request without body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["This feature file has all Get requests"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.restassured.runner.TestRunner@2758fe70]" name="tearDownClass" is-config="true" duration-ms="2229" started-at="2020-06-29T21:07:15Z" finished-at="2020-06-29T21:07:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.restassured.runner.TestRunner -->
+    </test> <!-- API Testing -->
+  </suite> <!-- BDD Test Suite -->
+</testng-results>

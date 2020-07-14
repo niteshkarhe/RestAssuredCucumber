@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite">
+<!--  <listeners>
+	<listener class-name="com.restassured.hook.Hooks"/>
+</listeners> -->
+  <test name="API Testing">
+    <classes>
+      <!-- <class name="com.api.rest.api.helper.GetMethodTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.PostMethodTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.DeleteMethodTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.PutMethodTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.SSLRequestsTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.AsyncRequestTest"/> -->
+     <!-- <class name="com.api.rest.api.restassuredtest.GetMethodTest"/> -->
+     	<class name="com.restassured.runner.TestRunner"/>
+    </classes>
+  </test>
+</suite>
