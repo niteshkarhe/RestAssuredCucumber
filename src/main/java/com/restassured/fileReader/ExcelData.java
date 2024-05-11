@@ -58,7 +58,7 @@ public class ExcelData
 							try
 							{
 								Cell cellValue = cellN.next();
-								if(cellValue.getCellTypeEnum()==CellType.STRING)
+								if(cellValue.getCellType() == CellType.STRING)
 								{
 									if(cellValue.getStringCellValue().equals(testname))
 									{
@@ -137,11 +137,11 @@ public class ExcelData
 						columnNo=columnCount;
 					}
 					//To get Column names in arraylist
-					if(value.getCellTypeEnum()==CellType.STRING)
+					if(value.getCellType() ==CellType.STRING)
 					{
 						ColNames.add(columnCount, value.getStringCellValue());
 					}
-					else if(value.getCellTypeEnum()==CellType.NUMERIC)
+					else if(value.getCellType()==CellType.NUMERIC)
 					{
 						String cellData = NumberToTextConverter.toText(value.getNumericCellValue());
 						ColNames.add(columnCount, cellData);
@@ -160,7 +160,7 @@ public class ExcelData
 						try
 						{
 							Cell cellValue = cellN.next();
-							if(cellValue.getCellTypeEnum()==CellType.STRING)
+							if(cellValue.getCellType() == CellType.STRING)
 							{
 								if(ColNames.get(key).equals("Testcase"))
 								{
@@ -170,7 +170,7 @@ public class ExcelData
 									data.put(ColNames.get(key), cellValue.getStringCellValue());
 								}
 							}
-							else if(cellValue.getCellTypeEnum()==CellType.NUMERIC)
+							else if(cellValue.getCellType()== CellType.NUMERIC)
 							{
 								String cellData = NumberToTextConverter.toText(cellValue.getNumericCellValue());
 								data.put(ColNames.get(key), cellData);

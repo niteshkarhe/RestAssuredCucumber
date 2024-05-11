@@ -5,11 +5,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
-import cucumber.api.testng.CucumberFeatureWrapper;
-import cucumber.api.testng.PickleEventWrapper;
-import cucumber.api.testng.TestNGCucumberRunner;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.Pickle;
+import io.cucumber.testng.TestNGCucumberRunner;
+
+
 
 @CucumberOptions(
 		features = "src/test/resources/RequestAndUIFeatures",
@@ -20,10 +20,9 @@ import cucumber.api.testng.TestNGCucumberRunner;
 				,"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 				//,"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-report/report.html"
 				} //To generate types of reporting
-		,tags= {"@UI", "not @Smoke", "not @SmokeGet", "not @SmokePost", "not @SmokePut", "not @SmokeDelete", "not @SmokeAuth",  "not @Regression", "not @ListDatatable"}
+		,tags= "@UI and not @Smoke and not @SmokeGet and not @SmokePost and not @SmokePut and not @SmokeDelete and not @SmokeAuth and not @Regression and not @ListDatatable"
 		,monochrome=true //To print output on console in readable format
-		,dryRun=false //When set true, it will check mapping between feature file and step definition file and will not run any scenario actually
-		,strict=true //When dryRun is false and strict is true, it will run all Scenarios and will check if ant step def is not defined in StepDefinition
+		,dryRun=false //When set true, it will check mapping between feature file and step definition file and will not run any scenario actuall		
 		)
 
 public class TestRunner
@@ -41,8 +40,8 @@ private TestNGCucumberRunner testNgCucumberRunner;
     }*/
 	
 	@Test(groups = "cucumber scenarios", description = "Runs Cucumber Feature", dataProvider = "scenario")
-    public void feature(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {
-    	testNgCucumberRunner.runScenario(pickleEvent.getPickleEvent());
+    public void feature(Pickle pickleEvent) throws Throwable {
+    	testNgCucumberRunner.runScenario(pickleEvent);
     }
  
     @DataProvider(parallel=false) //Default thread count is 10

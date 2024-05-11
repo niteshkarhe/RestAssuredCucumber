@@ -5,8 +5,8 @@ import com.restassured.restservicefunctions.RequestBuilder;
 import com.restassured.restservicefunctions.RequestDataFunctions;
 import com.restassured.utils.Utility;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 import java.util.HashMap;
 import java.util.List;
