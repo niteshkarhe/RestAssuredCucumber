@@ -4,5 +4,5 @@
 /TestResult/
 .classpath
 .project
-.settings
+/.settings/
 .git
