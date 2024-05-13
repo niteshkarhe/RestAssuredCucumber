@@ -1,0 +1,14 @@
+{
+	"applicationUrl": "https://opensource-demo.orangehrmlive.com",
+	"browserScope": "method",
+	"browserName": "chrome",
+	"browserVersion": "",
+	"environment": "QA",
+	"webDriverMaxWait": 50,
+	"implicitWait": 0,
+	"pageLoadWait": 30,
+	"headlessBrowser": false,
+	"fileDownloadPath": "",
+	"incognitoMode": false,
+	"screenCapture": true
+}

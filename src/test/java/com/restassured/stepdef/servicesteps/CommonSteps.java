@@ -1,8 +1,8 @@
 package com.restassured.stepdef.servicesteps;
 
-import com.restassured.hook.Hooks;
 import com.restassured.restservicefunctions.RequestBuilder;
 import com.restassured.restservicefunctions.RequestDataFunctions;
+import com.restassured.setup.Hooks;
 import com.restassured.utils.Utility;
 
 import io.cucumber.java.en.Given;
@@ -15,31 +15,6 @@ import org.testng.Assert;
 public class CommonSteps 
 {
 	public List<HashMap<String,String>> testdata;
-	
-	@Given("user runs {string}")
-	public void user_runs(String request) 
-	{
-		testdata = Hooks.getExcelData();
-		if(testdata!=null)
-		{
-			RequestDataFunctions.setRequestData(testdata.get(0));
-		}
-		RequestBuilder reqInvoker = new RequestBuilder(Utility.getSubtextAfter(request.toString(), "request."));
-		reqInvoker.request();
-	}
-	
-	@Given("user runs {string} with data {string}")
-	public void user_runs_with_data(String request, String row_index) {
-		int index = Integer.parseInt(row_index);
-		testdata = Hooks.getExcelData();
-		if(testdata!=null)
-		{
-			RequestDataFunctions.setRequestData(testdata.get(index));
-		}
-		System.out.println(testdata.get(index));
-		RequestBuilder reqInvoker = new RequestBuilder(Utility.getSubtextAfter(request.toString(), "request."));
-		reqInvoker.request();
-	}
 	
 	@Then("get the response body")
 	public void get_the_response_body() {

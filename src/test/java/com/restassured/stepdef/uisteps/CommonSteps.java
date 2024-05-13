@@ -1,6 +1,6 @@
 package com.restassured.stepdef.uisteps;
 
-import com.restassured.hook.Hooks;
+import com.restassured.setup.Hooks;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,7 +10,7 @@ public class CommonSteps
 
 	@When("user launches browser with url")
 	public void user_launches_browser_with_url() {
-	    Hooks.getDriverManager().getDriver();
+	    // Hooks.getDriverManager().getDriver();
 	}
 
 	@Then("user logs into application")
