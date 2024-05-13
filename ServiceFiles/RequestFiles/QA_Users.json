@@ -1,0 +1,14 @@
+{
+	"Verify that the candidate questionaeer data is saved in the database": [
+		{
+			"email": "pm@email.com",
+			"name": "Padma Guduru",
+			"role": "Senior Lead",
+			"question": "What is your name?",
+			"answer": "Padma Guduru",
+			"percentage": 100,
+			"result": "Passed",
+			"recordingpath": ""
+		}
+	]
+}

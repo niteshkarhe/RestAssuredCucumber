@@ -1,0 +1,11 @@
+{
+	"Verify that the candidate is created in the database": [
+		{
+			"name": "Padma Guduru",
+			"email": "pm@email.com",
+			"jobid": 456,
+			"resumepercentage": "99.45",
+			"isshortlisted": "shortlisted"
+		}
+	]
+}
