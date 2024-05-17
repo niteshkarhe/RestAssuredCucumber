@@ -1,4 +1,4 @@
-@UIOneTimeSetup
+@SuiteTearDown @UIOneTimeSetup
 Feature: This feature file has all Get requests
 
 @SmokeUI @UISetup @UITeardown

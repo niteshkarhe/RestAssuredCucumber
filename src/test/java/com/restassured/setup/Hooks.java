@@ -182,7 +182,7 @@ public class Hooks {
 	}
 	
 	@AfterAll
-	public void uIOneTimeTeardown() {
+	public static void uIOneTimeTeardown() {
 		if (driver != null && projectConfigs.getBrowserScope().equals("class")) 
 		{
 			driver.get().quit();
