@@ -1,23 +1,14 @@
 package com.restassured.runner;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import io.cucumber.core.gherkin.Feature;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import io.cucumber.testng.FeatureWrapper;
-import io.cucumber.testng.Pickle;
-import io.cucumber.testng.PickleWrapper;
-import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(features = {"src/test/resources/CvShortlisterFeatures", "src/test/resources/RequestAndUIFeatures"}, 
-				glue = { "com.restassured.stepdef", "com.restassured.setup" } // Path of step definition file, 
+				glue = { "com.restassured.stepdef", "com.restassured.setup" }, // Path of step definition file 
 				plugin = { "pretty", "html:target/cucumber-reports/cucumber-html-report",
 				"json:target/cucmber-reports/CucumberTestReport.json", 
-				"rerun:target/cucmber-reports/rerun.txt"
+				"rerun:target/cucmber-reports/rerun.txt",
 		// ,"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 		// ,"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-report/report.html"
 		} // To generate types of reporting
